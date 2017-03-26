@@ -3,16 +3,14 @@ var CHANGE_INTERVAL = 8000;
 function getPhoto() {
   // Return a file name string for image
   var images = [
-      "/images/1.jpg",
-      "/images/2.jpg",
-      "/images/3.jpg",
-      "/images/4.jpg",
-      "",
-
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/4.jpg"
   ]
-
   var randomPhoto = images[Math.floor(Math.random() * images.length)];
   console.log(randomPhoto);
+  document.getElementById("image").src=randomPhoto;
   return randomPhoto;
 }
 
@@ -26,6 +24,9 @@ function getCaption() {
       "You wanna coem see my drone?",
       "I should probably take some pictures",
       "I'm the official MLH photographer",
+      "Do you want to go to the pub later?",
+      "#dronephotography",
+      "#ballin",
   ]
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   console.log(randomQuote);
