@@ -22,7 +22,9 @@ function getCaption() {
       "You wanna coem see my drone?",
       "I should probably take some pictures",
       "I'm the official MLH photographer",
-      "Do you want to go to the pub later?"
+      "Do you want to go to the pub later?",
+      "#dronephotography",
+      "#ballin",
   ]
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   console.log(randomQuote);
