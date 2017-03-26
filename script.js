@@ -74,7 +74,7 @@ function shuffle(array) {
 
 function setPhotoAndQuote() {
   document.getElementById("image").style.backgroundImage = "url('" + getPhoto() + "')";
-  document.getElementById("caption").innerHTML = getCaption();
+  document.getElementById("caption").innerHTML = "\"" + getCaption() + "\"";
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
