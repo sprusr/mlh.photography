@@ -1,9 +1,14 @@
+@font-face {
+  font-family: bb;
+  src: url('bb.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: sans-serif;
+  font-family: bb, sans-serif;
   overflow: hidden;
 }
 
