@@ -11,13 +11,12 @@ var images = [
     "images/6.jpg",
     "images/7.jpg",
     "images/8.jpg",
-    "images/9.jpg",
 ]
 
 var quotes = [
     "Ballin' on a budget",
     "&lt;insert name here&gt; for MVP",
-    "Looking forward to <insert hackathon here> this weekend",
+    "Looking forward to &lt;insert hackathon here&gt this weekend",
     "My drone's so heavy",
     "You wanna come see my drone?",
     "I should probably take some pictures",
