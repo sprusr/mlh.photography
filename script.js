@@ -15,7 +15,7 @@ var images = [
 
 var quotes = [
     "Ballin' on a budget",
-    "<insert name here> for MVP",
+    "&lt;insert name here&gt; for MVP",
     "Looking forward to <insert hackathon here> this weekend",
     "My drone's so heavy",
     "You wanna come see my drone?",
@@ -29,7 +29,7 @@ var quotes = [
 function getPhoto() {
   // Return a file name string for image
   var randomPhoto = images[currPhoto];
-  if (currPhoto < images.length) {
+  if (currPhoto < images.length-1) {
       currPhoto++;
   }
   else {
@@ -42,7 +42,7 @@ function getPhoto() {
 function getCaption() {
   // Return a random caption - string
   var randomQuote = quotes[currQuote];
-  if (currQuote < images.length) {
+  if (currQuote < images.length-1) {
       currQuote++;
   }
   else {
