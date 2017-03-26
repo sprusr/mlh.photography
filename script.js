@@ -1,3 +1,5 @@
+var CHANGE_INTERVAL = 6000;
+
 function getPhoto() {
   // Return a file name string for image
   var images = [
@@ -31,5 +33,9 @@ function getCaption() {
   return randomQuote;
 }
 
-getPhoto();
-getCaption();
+document.addEventListener("DOMContentLoaded", function(event) {
+  setInterval(function() {
+    document.getElementById("image").style.background = "url('" + getPhoto() + "')";
+    document.getElementById("caption").innerHTML = getCaption();
+  }, CHANGE_INTERVAL);
+});

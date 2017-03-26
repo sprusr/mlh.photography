@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#image {
+  background-size: cover;
+  background-position: center;
+  width: 120vw;
+  height: 100vh;
+  position: absolute;
+  animation: imagescroll 6s infinite linear;
+}
+
+#caption {
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+
+@keyframes imagescroll {
+  0% {
+    left: -20vw;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 20vw;
+    opacity: 0;
+  }
+}
