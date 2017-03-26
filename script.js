@@ -1,4 +1,4 @@
-var CHANGE_INTERVAL = 6000;
+var CHANGE_INTERVAL = 8000;
 
 function getPhoto() {
   // Return a file name string for image
@@ -32,9 +32,14 @@ function getCaption() {
   return randomQuote;
 }
 
+function setPhotoAndQuote() {
+  document.getElementById("image").style.backgroundImage = "url('" + getPhoto() + "')";
+  document.getElementById("caption").innerHTML = getCaption();
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
+  setPhotoAndQuote();
   setInterval(function() {
-    document.getElementById("image").style.background = "url('" + getPhoto() + "')";
-    document.getElementById("caption").innerHTML = getCaption();
+    setPhotoAndQuote();
   }, CHANGE_INTERVAL);
 });
