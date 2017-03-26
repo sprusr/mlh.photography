@@ -79,6 +79,8 @@ function setPhotoAndQuote() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   setPhotoAndQuote();
+  document.getElementById("image").style.animation = "imagescroll " + (CHANGE_INTERVAL/1000) + "s infinite linear";
+  document.getElementById("caption").style.animation = "captionfade " + (CHANGE_INTERVAL/1000) + "s infinite linear";
   setInterval(function() {
     setPhotoAndQuote();
   }, CHANGE_INTERVAL);

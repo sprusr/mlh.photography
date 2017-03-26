@@ -19,7 +19,6 @@ body {
   width: 120vw;
   height: 100vh;
   position: absolute;
-  animation: imagescroll 8s infinite linear;
 }
 
 #caption {
@@ -28,7 +27,6 @@ body {
   text-align: center;
   width: 100%;
   font-size: 40px;
-  animation: captionfade 8s infinite linear;
 }
 
 @keyframes imagescroll {
@@ -36,11 +34,17 @@ body {
     left: -20vw;
     opacity: 0;
   }
+  2% {
+    opacity: 0;
+  }
   30% {
     opacity: 1;
   }
   70% {
     opacity: 1;
+  }
+  98% {
+    opacity: 0;
   }
   100% {
     left: 0vw;
@@ -52,11 +56,17 @@ body {
   0% {
     opacity: 0;
   }
+  2% {
+    opacity: 0;
+  }
   30% {
     opacity: 1;
   }
   70% {
     opacity: 1;
+  }
+  98% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
