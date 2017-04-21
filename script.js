@@ -24,6 +24,7 @@ var quotes = [
     "Do you want to go to the pub later?",
     "#dronephotography",
     "#ballin",
+    "I'm hacking at a hackathon"
 ]
 
 function getPhoto() {
