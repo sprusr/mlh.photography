@@ -12,6 +12,7 @@ var images = [
     "images/7.jpg",
     "images/8.jpg",
     "images/9.jpg",
+    "images/10.jpg",
 ]
 
 var quotes = [
@@ -25,7 +26,8 @@ var quotes = [
     "Do you want to go to the pub later?",
     "#dronephotography",
     "#ballin",
-    "I'm hacking at a hackathon"
+    "I'm hacking at a hackathon",
+    "MLH money",
 ]
 
 function getPhoto() {
