@@ -13,6 +13,7 @@ var images = [
     "images/8.jpg",
     "images/9.jpg",
     "images/10.jpg",
+    "images/11.jpg"
 ]
 
 var quotes = [
