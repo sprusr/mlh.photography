@@ -2,6 +2,7 @@ var CHANGE_INTERVAL = 8000;
 var currPhoto = 0;
 var currQuote = 0;
 var totalLoads = 0;
+var firstLoad = true;
 var images = [
   "images/1.jpg",
   "images/2.jpg",
@@ -45,8 +46,8 @@ function loadImage(source) {
 
 var quotes = [
   "Ballin' on a budget",
-  "&lt;insert name here&gt; for MVP",
-  "Looking forward to &lt;insert hackathon here&gt this weekend",
+  "<insert name here> for MVP",
+  "Looking forward to <insert hackathon here> this weekend",
   "My drone's so heavy",
   "You wanna come see my drone?",
   "I should probably take some pictures",
@@ -102,14 +103,28 @@ function shuffle(array) {
   return array;
 }
 
-function setPhotoAndQuote() {
-  if(totalLoads === loadedImages.length){
-    document.getElementById("image").style.backgroundImage =
-      "url('" + getPhoto() + "')";
-    document.getElementById("caption").innerHTML = '"' + getCaption() + '"';
+function checkFirstTime(){
+  if(firstLoad == true){
+    waitTime = 1000;
+    firstLoad = false;
   }else{
-    document.getElementById("caption").innerHTML = '"' + "Loading..." + '"';
+    waitTime = 0;
   }
+
+  return waitTime;
+}
+
+function setPhotoAndQuote() {
+  var waitTime = checkFirstTime();
+  setTimeout( function () {
+    if(totalLoads === loadedImages.length){
+      document.getElementById("image").style.backgroundImage =
+        "url('" + getPhoto() + "')";
+      document.getElementById("caption").innerHTML = '"' + getCaption() + '"';
+    }else{
+      document.getElementById("caption").innerHTML = '"' + "Loading..." + '"';
+    }
+  }, waitTime);
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
