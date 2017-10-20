@@ -1,7 +1,7 @@
 var CHANGE_INTERVAL = 8000;
 var currPhoto = 0;
 var currQuote = 0;
-
+var totalLoads = 0;
 var images = [
   "images/1.jpg",
   "images/2.jpg",
@@ -17,6 +17,31 @@ var images = [
   "images/12.jpg",
   "images/13.jpg",
 ];
+
+var loadedImages = [
+  loadImage("images/1.jpg"),
+  loadImage("images/2.jpg"),
+  loadImage("images/3.jpg"),
+  loadImage("images/4.jpg"),
+  loadImage("images/5.jpg"),
+  loadImage("images/6.jpg"),
+  loadImage("images/7.jpg"),
+  loadImage("images/8.jpg"),
+  loadImage("images/9.jpg"),
+  loadImage("images/10.jpg"),
+  loadImage("images/11.jpg"),
+  loadImage("images/12.jpg"),
+];
+
+
+
+function loadImage(source) {
+  var image = new Image();
+  image.src = source;
+  image.onload = function () { totalLoads++ };
+
+  return image.src;
+}
 
 var quotes = [
   "Ballin' on a budget",
@@ -35,7 +60,7 @@ var quotes = [
 
 function getPhoto() {
   // Return a file name string for image
-  var randomPhoto = images[currPhoto];
+  randomPhoto = loadedImages[currPhoto];
   if (currPhoto < images.length - 1) {
     currPhoto++;
   } else {
@@ -78,9 +103,13 @@ function shuffle(array) {
 }
 
 function setPhotoAndQuote() {
-  document.getElementById("image").style.backgroundImage =
-    "url('" + getPhoto() + "')";
-  document.getElementById("caption").innerHTML = '"' + getCaption() + '"';
+  if(totalLoads === loadedImages.length){
+    document.getElementById("image").style.backgroundImage =
+      "url('" + getPhoto() + "')";
+    document.getElementById("caption").innerHTML = '"' + getCaption() + '"';
+  }else{
+    document.getElementById("caption").innerHTML = '"' + "Loading..." + '"';
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
