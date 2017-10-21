@@ -26,6 +26,7 @@ body {
   text-align: center;
   width: 100%;
   font-size: 50px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 @keyframes imagescroll {
