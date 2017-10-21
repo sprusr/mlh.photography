@@ -48,7 +48,7 @@ function getPhoto() {
 function getCaption() {
   // Return a random caption - string
   var randomQuote = quotes[currQuote];
-  if (currQuote < images.length - 1) {
+  if (currQuote < quotes.length - 1) {
     currQuote++;
   } else {
     quotes = shuffle(quotes);
@@ -83,13 +83,13 @@ function setPhotoAndQuote() {
   document.getElementById("caption").innerHTML = '"' + getCaption() + '"';
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   setPhotoAndQuote();
   document.getElementById("image").style.animation =
     "imagescroll " + CHANGE_INTERVAL / 1000 + "s infinite linear";
   document.getElementById("caption").style.animation =
     "captionfade " + CHANGE_INTERVAL / 1000 + "s infinite linear";
-  setInterval(function() {
+  setInterval(function () {
     setPhotoAndQuote();
   }, CHANGE_INTERVAL);
 });
