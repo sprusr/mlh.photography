@@ -31,6 +31,7 @@ var quotes = [
   "#ballin",
   "I'm hacking at a hackathon",
   "MLH money",
+  "Pub?",
 ];
 
 function getPhoto() {
