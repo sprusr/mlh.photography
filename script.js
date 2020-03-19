@@ -33,6 +33,7 @@ var quotes = [
   "MLH money",
   "Oi Oiiii",
   "Staying in a hostel for the first time 😔😔",
+  "Even COVID-19 can't stop me",
 ];
 
 function getPhoto() {
